@@ -1,0 +1,43 @@
+DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <title>Changer de Police</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      padding: 20px;
+    }
+    #texte {
+      font-size: 24px;
+      margin-bottom: 30px;
+    }
+    .btn-police {
+      margin: 5px;
+      padding: 10px 20px;
+      cursor: pointer;
+      border: 1px solid #aaa;
+      border-radius: 5px;
+      background-color: #f0f0f0;
+    }
+  </style>
+  <!-- Import de polices Google -->
+  <link href="https://fonts.googleapis.com/css2?family=Roboto&family=Lobster&family=Pacifico&family=Oswald&family=Indie+Flower&display=swap" rel="stylesheet">
+</head>
+<body>
+  <div id="texte">Ceci est un texte avec une police modifiable.</div>
+
+  <button class="btn-police" onclick="changerPolice('Arial')">Arial (défaut)</button>
+  <button class="btn-police" onclick="changerPolice('Roboto')">Roboto</button>
+  <button class="btn-police" onclick="changerPolice('Lobster')">Lobster</button>
+  <button class="btn-police" onclick="changerPolice('Pacifico')">Pacifico</button>
+  <button class="btn-police" onclick="changerPolice('Oswald')">Oswald</button>
+  <button class="btn-police" onclick="changerPolice('Indie Flower')">Indie Flower</button>
+
+  <script>
+    function changerPolice(police) {
+      document.getElementById('texte').style.fontFamily = police;
+    }
+  </script>
+</body>
+</html>
